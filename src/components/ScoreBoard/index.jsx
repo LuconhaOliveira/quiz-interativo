@@ -2,7 +2,9 @@ import styles from "./ScoreBoard.module.css"
 
 const ScoreBoard = ({ questions, answers, resetQuiz }) => {
 
-    let pontuacao=0,acertos = 0,menorTempo;
+    let pontuacao=0;
+    let acertos = 0;
+    let menorTempo;
 
     questions.map((question,i) => {
         if(question.answer==answers[i].optionChose){
