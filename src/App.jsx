@@ -36,12 +36,12 @@ function App() {
   }, [answers])
 
   return (
-    <>
+    <main>
       {questionIndex<questions.length?
       <><Header currentQuestion={questionIndex+1} totalQuestions={questions.length} timer={timer} />
       <QuestionCard question={questions[questionIndex].question} options={questions[questionIndex].options} answerQuestion={answerQuestion} /></>
       : <ScoreBoard questions={questions} answers={answers} resetQuiz={resetQuiz} /> }
-    </>
+    </main>
   )
 }
 
